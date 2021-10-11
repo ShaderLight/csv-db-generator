@@ -1,3 +1,5 @@
+from .randomization import random_date
+
 class csv_field:
     def __init__(self, name, input_filename, input_fieldnames):
         self.name = name
