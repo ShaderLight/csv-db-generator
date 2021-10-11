@@ -35,4 +35,3 @@ class id_field:
     
     def generate(n):
         pass
-    
