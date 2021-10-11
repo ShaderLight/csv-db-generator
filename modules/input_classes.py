@@ -27,3 +27,12 @@ class randint_field:
     
     def generate(self, n):
         pass
+
+
+class id_field:
+    def __init__(self):
+        pass
+    
+    def generate(n):
+        pass
+    
