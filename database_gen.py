@@ -1,5 +1,5 @@
-from modules.input_classes import*
 from modules.csv_io import list_to_csv
+from modules.input_classes import*
 
 
 def generate_db(output_filename, n, *args):

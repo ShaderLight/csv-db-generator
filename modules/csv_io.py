@@ -1,5 +1,6 @@
 from csv import DictReader, DictWriter
 
+
 def csv_to_list(filename):
     with open(filename, mode='r', encoding='utf-8') as f:
         csv_reader = DictReader(f, delimiter=';')

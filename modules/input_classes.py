@@ -1,6 +1,7 @@
+from random import randint
+
 from .randomization import random_date, random_select
 from .csv_io import csv_to_list
-import random
 
 class csv_field:
     def __init__(self, names, input_filename, input_fieldnames=None):
@@ -58,7 +59,7 @@ class randint_field:
     def generate(self, n):
         output = []
         for i in range(n):
-            output.append({self.name : random.randint(self.a, self.b)})
+            output.append({self.name : randint(self.a, self.b)})
 
         return output
 
