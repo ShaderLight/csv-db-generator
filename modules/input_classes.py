@@ -6,17 +6,18 @@ from .csv_io import csv_to_list
 class csv_field:
     def __init__(self, names, input_filename, input_fieldnames=None):
         self.input_filename = input_filename
-        if type(input_fieldnames) != list:
-            self.input_fieldnames = [input_fieldnames]
-        elif input_fieldnames == None:
-            self.input_fieldnames = names
-        else:
-            self.input_fieldnames = input_fieldnames
         
         if type(names) != list:
             self.names = [names]
         else:
             self.names = names
+
+        if input_fieldnames == None:
+            self.input_fieldnames = self.names
+        elif type(input_fieldnames) != list:
+            self.input_fieldnames = [input_fieldnames]
+        else:
+            self.input_fieldnames = input_fieldnames
 
     def generate(self, n):
         output = []
@@ -51,15 +52,23 @@ class date_field:
 
 
 class randint_field:
-    def __init__(self, name, a, b):
+    def __init__(self, name, a, b, unique=False):
         self.name = name
         self.a = a
         self.b = b
+        self.unique = unique
     
+
     def generate(self, n):
+        used_numbers = []
         output = []
         for i in range(n):
+            rint = randint(self.a, self.b)
+            if self.unique:
+                if rint in used_numbers:
+                    continue
             output.append({self.name : randint(self.a, self.b)})
+            used_numbers.append(used_numbers)
 
         return output
 
