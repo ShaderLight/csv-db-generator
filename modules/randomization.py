@@ -8,7 +8,7 @@ def random_select(input_list):
     return input_list[i]
 
 
-def random_date(fromy, fromm, fromd, toy, tom, tod):
+def random_date(fromd, fromm, fromy, tod, tom, toy):
     start_date = date(fromy, fromm, fromd)
     end_date = date(toy, tom, tod)
 

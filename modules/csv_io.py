@@ -16,10 +16,7 @@ def list_to_csv(filename, input_list, fieldnames):
 
         csv_writer.writeheader()
 
-        print(fieldnames)
-        print(input_list)
         for row in input_list:
-            print(row)
             csv_writer.writerow(row)
 
     return 0
