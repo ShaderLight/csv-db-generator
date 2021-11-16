@@ -1,4 +1,5 @@
-# csv generator
+# csv generator  ![Licence](https://img.shields.io/github/license/ShaderLight/csv-db-generator) ![GitHub last commit](https://img.shields.io/github/last-commit/shaderlight/csv-db-generator)
+
  Small script for generating csv databases from other csv files or by selecting random integers or dates
 
 ---
@@ -10,7 +11,7 @@ The most straightforward way would be to open database_gen.py and run generate_d
 - **output_filename** - Specifies how the output file should be named
 - **n** - Specifies how many rows need to be generated
 - **args** - one or more objects created using classes defined in *input_classes.py*
-
+---
 ### Input classes and their properties:
 - **csv_field** - represents a field (or fields) from an external csv file (must be located in the main directory of this repo)
   - **names** - name(s) of the csv fields (in the input file) to include in generation of the output csv file
