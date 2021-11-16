@@ -23,3 +23,5 @@ def generate_db(output_filename, n, *args):
             output[k].update(temp_val[k])
 
     return list_to_csv(output_filename, output, fieldnames)
+
+generate_db('output.csv', 4, date_field('d', 1, 1, 2000, 10, 10, 2000))

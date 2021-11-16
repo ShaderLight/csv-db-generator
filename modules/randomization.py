@@ -2,12 +2,14 @@ from datetime import date, timedelta
 from random import randint, randrange
 
 
+# Selects a random element from a list and returns it
 def random_select(input_list):
     i = randint(0, len(input_list)-1)
     
     return input_list[i]
 
 
+# Picks a random date between dates specified in params
 def random_date(fromd, fromm, fromy, tod, tom, toy):
     start_date = date(fromy, fromm, fromd)
     end_date = date(toy, tom, tod)

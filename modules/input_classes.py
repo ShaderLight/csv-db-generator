@@ -3,6 +3,8 @@ from random import randint
 from .randomization import random_date, random_select
 from .csv_io import csv_to_list
 
+
+# Represents a field (or fields) with value taken randomly from an external csv file
 class csv_field:
     def __init__(self, names, input_filename, input_fieldnames=None):
         self.input_filename = input_filename
@@ -32,6 +34,8 @@ class csv_field:
         
         return output
 
+
+# Represents a field with random date as value
 class date_field:
     def __init__(self, name, from_d, from_m, from_y, to_d, to_m, to_y):
         self.name = name
@@ -51,6 +55,7 @@ class date_field:
         return output
 
 
+# Represents a field with a random integer
 class randint_field:
     def __init__(self, name, a, b, unique=False):
         self.name = name
@@ -73,6 +78,7 @@ class randint_field:
         return output
 
 
+# Represents a field with autoincrementing value (starts from 1)
 class id_field:
     def __init__(self, name='id'):
         self.name = name
